@@ -123,7 +123,7 @@ unittestresults: cardtest1.c unittest1.c unittest2.c unittest3.c unittest4.c dom
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard unittestresults
+all: playdom player testDrawCard testBuyCard badTestDrawCard unittestresults randomtestcard1 randomtestcard2 randomtestadventurer
 
 clean:
 	rm -f *.o playdom.exe playdom player player.exe *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe badTestDrawCard badTestDrawCard.exe randomtestcard1 randomtestcard2 randomtestadventurer unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 unittestresults.out

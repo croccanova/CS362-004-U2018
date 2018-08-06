@@ -1,3 +1,1658 @@
+TEST RESULTS FOR randomtestadventurer.c:
+Running tests for Adventurer card.
+
+Test hand count for player A
+Expected: 163	Actual: 164
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 220	Actual <= 215
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 17	Actual: 17
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 365892012	Actual: 365892012
+TEST PASSED
+
+Testing duchy
+Expected: -1482261120	Actual: -1482261120
+TEST PASSED
+
+Testing estate
+Expected: -1482261120	Actual: -1482261120
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: -1716903204	Actual: -1716903204
+TEST PASSED
+
+Testing pile# 1
+Expected: 589027582	Actual: 589027582
+TEST PASSED
+
+Testing pile# 2
+Expected: -1482261120	Actual: -1482261120
+TEST PASSED
+
+Testing pile# 3
+Expected: 365892012	Actual: 365892012
+TEST PASSED
+
+Testing pile# 4
+Expected: 59252565	Actual: 59252565
+TEST PASSED
+
+Testing pile# 5
+Expected: -489738968	Actual: -489738968
+TEST PASSED
+
+Testing pile# 6
+Expected: 1109606448	Actual: 1109606448
+TEST PASSED
+
+Testing pile# 7
+Expected: 1342751650	Actual: 1342751650
+TEST PASSED
+
+Testing pile# 8
+Expected: 1261923783	Actual: 1261923783
+TEST PASSED
+
+Testing pile# 9
+Expected: 2099315854	Actual: 2099315854
+TEST PASSED
+
+Testing pile# 10
+Expected: -2134125551	Actual: -2134125551
+TEST PASSED
+
+Testing pile# 11
+Expected: -645747689	Actual: -645747689
+TEST PASSED
+
+Testing pile# 12
+Expected: 723968241	Actual: 723968241
+TEST PASSED
+
+Testing pile# 13
+Expected: 1319010745	Actual: 1319010745
+TEST PASSED
+
+Testing pile# 14
+Expected: 1198591128	Actual: 1198591128
+TEST PASSED
+
+Testing pile# 15
+Expected: -1220843831	Actual: -1220843831
+TEST PASSED
+
+Testing pile# 16
+Expected: 1310238295	Actual: 1310238295
+TEST PASSED
+
+Testing pile# 17
+Expected: 1599242154	Actual: 1599242154
+TEST PASSED
+
+Testing pile# 18
+Expected: 150035655	Actual: 150035655
+TEST PASSED
+
+Testing pile# 19
+Expected: 1846958933	Actual: 1846958933
+TEST PASSED
+
+Testing pile# 20
+Expected: -1006363730	Actual: -1006363730
+TEST PASSED
+
+Testing pile# 21
+Expected: 1333526405	Actual: 1333526405
+TEST PASSED
+
+Testing pile# 22
+Expected: 1089823581	Actual: 1089823581
+TEST PASSED
+
+Testing pile# 23
+Expected: 2070022651	Actual: 2070022651
+TEST PASSED
+
+Testing pile# 24
+Expected: -1576276347	Actual: -1576276347
+TEST PASSED
+
+Testing pile# 25
+Expected: 1425438547	Actual: 1425438547
+TEST PASSED
+
+Testing pile# 26
+Expected: 638184441	Actual: 638184441
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: -1310336370	Actual: -1310336370
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 2084594981	Actual: 2084594981
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1967812036	Actual: 1967812036
+TEST PASSED
+
+Skipping tested player
+Testing player #2
+Testing other player's hand count(s)
+Expected: -810019084	Actual: -810019084
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 2019297267	Actual: 2019297267
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: -2146974968	Actual: -2146974968
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 10	Actual: 11
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 469	Actual <= 467
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 2	Actual: 2
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 1261067954	Actual: 1261067954
+TEST PASSED
+
+Testing duchy
+Expected: -2072705653	Actual: -2072705653
+TEST PASSED
+
+Testing estate
+Expected: -2072705653	Actual: -2072705653
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: 1204683397	Actual: 1204683397
+TEST PASSED
+
+Testing pile# 1
+Expected: 722336937	Actual: 722336937
+TEST PASSED
+
+Testing pile# 2
+Expected: -2072705653	Actual: -2072705653
+TEST PASSED
+
+Testing pile# 3
+Expected: 1261067954	Actual: 1261067954
+TEST PASSED
+
+Testing pile# 4
+Expected: 604733616	Actual: 604733616
+TEST PASSED
+
+Testing pile# 5
+Expected: -1027271976	Actual: -1027271976
+TEST PASSED
+
+Testing pile# 6
+Expected: -560069515	Actual: -560069515
+TEST PASSED
+
+Testing pile# 7
+Expected: 742285430	Actual: 742285430
+TEST PASSED
+
+Testing pile# 8
+Expected: -1595673585	Actual: -1595673585
+TEST PASSED
+
+Testing pile# 9
+Expected: 1071774824	Actual: 1071774824
+TEST PASSED
+
+Testing pile# 10
+Expected: -1223142851	Actual: -1223142851
+TEST PASSED
+
+Testing pile# 11
+Expected: 149451624	Actual: 149451624
+TEST PASSED
+
+Testing pile# 12
+Expected: -1089487946	Actual: -1089487946
+TEST PASSED
+
+Testing pile# 13
+Expected: 44696473	Actual: 44696473
+TEST PASSED
+
+Testing pile# 14
+Expected: -639518319	Actual: -639518319
+TEST PASSED
+
+Testing pile# 15
+Expected: -1823859647	Actual: -1823859647
+TEST PASSED
+
+Testing pile# 16
+Expected: 1864382261	Actual: 1864382261
+TEST PASSED
+
+Testing pile# 17
+Expected: -1838454367	Actual: -1838454367
+TEST PASSED
+
+Testing pile# 18
+Expected: 1054038339	Actual: 1054038339
+TEST PASSED
+
+Testing pile# 19
+Expected: 1824207406	Actual: 1824207406
+TEST PASSED
+
+Testing pile# 20
+Expected: -2055308670	Actual: -2055308670
+TEST PASSED
+
+Testing pile# 21
+Expected: -2026552698	Actual: -2026552698
+TEST PASSED
+
+Testing pile# 22
+Expected: -552262401	Actual: -552262401
+TEST PASSED
+
+Testing pile# 23
+Expected: -763557825	Actual: -763557825
+TEST PASSED
+
+Testing pile# 24
+Expected: 1456600717	Actual: 1456600717
+TEST PASSED
+
+Testing pile# 25
+Expected: 1417612069	Actual: 1417612069
+TEST PASSED
+
+Testing pile# 26
+Expected: -525928244	Actual: -525928244
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: -873590795	Actual: -873590795
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 967765936	Actual: 967765936
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: -1122493506	Actual: -1122493506
+TEST PASSED
+Testing player #1
+Testing other player's hand count(s)
+Expected: -2138414884	Actual: -2138414884
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -453282823	Actual: -453282823
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1878649607	Actual: 1878649607
+TEST PASSED
+
+Skipping tested player
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 27	Actual: 28
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 440	Actual <= 426
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 5	Actual: 5
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 1087970033	Actual: 1087970033
+TEST PASSED
+
+Testing duchy
+Expected: -1499278449	Actual: -1499278449
+TEST PASSED
+
+Testing estate
+Expected: -1499278449	Actual: -1499278449
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: 1327797365	Actual: 1327797365
+TEST PASSED
+
+Testing pile# 1
+Expected: 610086787	Actual: 610086787
+TEST PASSED
+
+Testing pile# 2
+Expected: -1499278449	Actual: -1499278449
+TEST PASSED
+
+Testing pile# 3
+Expected: 1087970033	Actual: 1087970033
+TEST PASSED
+
+Testing pile# 4
+Expected: 1339631924	Actual: 1339631924
+TEST PASSED
+
+Testing pile# 5
+Expected: 1563165002	Actual: 1563165002
+TEST PASSED
+
+Testing pile# 6
+Expected: -654220548	Actual: -654220548
+TEST PASSED
+
+Testing pile# 7
+Expected: -1917494797	Actual: -1917494797
+TEST PASSED
+
+Testing pile# 8
+Expected: 77832676	Actual: 77832676
+TEST PASSED
+
+Testing pile# 9
+Expected: 810009302	Actual: 810009302
+TEST PASSED
+
+Testing pile# 10
+Expected: -1942534745	Actual: -1942534745
+TEST PASSED
+
+Testing pile# 11
+Expected: 1941418819	Actual: 1941418819
+TEST PASSED
+
+Testing pile# 12
+Expected: -714742130	Actual: -714742130
+TEST PASSED
+
+Testing pile# 13
+Expected: 402301738	Actual: 402301738
+TEST PASSED
+
+Testing pile# 14
+Expected: 879531866	Actual: 879531866
+TEST PASSED
+
+Testing pile# 15
+Expected: -1163100413	Actual: -1163100413
+TEST PASSED
+
+Testing pile# 16
+Expected: -631312367	Actual: -631312367
+TEST PASSED
+
+Testing pile# 17
+Expected: -280787725	Actual: -280787725
+TEST PASSED
+
+Testing pile# 18
+Expected: 2144311859	Actual: 2144311859
+TEST PASSED
+
+Testing pile# 19
+Expected: 768938788	Actual: 768938788
+TEST PASSED
+
+Testing pile# 20
+Expected: -563837556	Actual: -563837556
+TEST PASSED
+
+Testing pile# 21
+Expected: 2087274227	Actual: 2087274227
+TEST PASSED
+
+Testing pile# 22
+Expected: -1187975641	Actual: -1187975641
+TEST PASSED
+
+Testing pile# 23
+Expected: -1080252281	Actual: -1080252281
+TEST PASSED
+
+Testing pile# 24
+Expected: -827600914	Actual: -827600914
+TEST PASSED
+
+Testing pile# 25
+Expected: 791520011	Actual: 791520011
+TEST PASSED
+
+Testing pile# 26
+Expected: -1754601641	Actual: -1754601641
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: 511701530	Actual: 511701530
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -299259234	Actual: -299259234
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: -1009222198	Actual: -1009222198
+TEST PASSED
+
+Skipping tested player
+Testing player #2
+Testing other player's hand count(s)
+Expected: 849768196	Actual: 849768196
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -2085290911	Actual: -2085290911
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1317850610	Actual: 1317850610
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 148	Actual: 149
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 34	Actual <= 31
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 23	Actual: 23
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: -1405729026	Actual: -1405729026
+TEST PASSED
+
+Testing duchy
+Expected: 407454692	Actual: 407454692
+TEST PASSED
+
+Testing estate
+Expected: 407454692	Actual: 407454692
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: -1927836653	Actual: -1927836653
+TEST PASSED
+
+Testing pile# 1
+Expected: -321571041	Actual: -321571041
+TEST PASSED
+
+Testing pile# 2
+Expected: 407454692	Actual: 407454692
+TEST PASSED
+
+Testing pile# 3
+Expected: -1405729026	Actual: -1405729026
+TEST PASSED
+
+Testing pile# 4
+Expected: 2079154452	Actual: 2079154452
+TEST PASSED
+
+Testing pile# 5
+Expected: 1135865486	Actual: 1135865486
+TEST PASSED
+
+Testing pile# 6
+Expected: 1451494510	Actual: 1451494510
+TEST PASSED
+
+Testing pile# 7
+Expected: -1569425730	Actual: -1569425730
+TEST PASSED
+
+Testing pile# 8
+Expected: -1629097610	Actual: -1629097610
+TEST PASSED
+
+Testing pile# 9
+Expected: -268214669	Actual: -268214669
+TEST PASSED
+
+Testing pile# 10
+Expected: -928047241	Actual: -928047241
+TEST PASSED
+
+Testing pile# 11
+Expected: 1276955340	Actual: 1276955340
+TEST PASSED
+
+Testing pile# 12
+Expected: -156396994	Actual: -156396994
+TEST PASSED
+
+Testing pile# 13
+Expected: 884177824	Actual: 884177824
+TEST PASSED
+
+Testing pile# 14
+Expected: 1035365437	Actual: 1035365437
+TEST PASSED
+
+Testing pile# 15
+Expected: -543786500	Actual: -543786500
+TEST PASSED
+
+Testing pile# 16
+Expected: -1167296412	Actual: -1167296412
+TEST PASSED
+
+Testing pile# 17
+Expected: 1234414777	Actual: 1234414777
+TEST PASSED
+
+Testing pile# 18
+Expected: 906389447	Actual: 906389447
+TEST PASSED
+
+Testing pile# 19
+Expected: 505797427	Actual: 505797427
+TEST PASSED
+
+Testing pile# 20
+Expected: 1182566683	Actual: 1182566683
+TEST PASSED
+
+Testing pile# 21
+Expected: -178105922	Actual: -178105922
+TEST PASSED
+
+Testing pile# 22
+Expected: 1808441861	Actual: 1808441861
+TEST PASSED
+
+Testing pile# 23
+Expected: 496512789	Actual: 496512789
+TEST PASSED
+
+Testing pile# 24
+Expected: 1643274959	Actual: 1643274959
+TEST PASSED
+
+Testing pile# 25
+Expected: -1631918366	Actual: -1631918366
+TEST PASSED
+
+Testing pile# 26
+Expected: 523961424	Actual: 523961424
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: 1029828709	Actual: 1029828709
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 1957125638	Actual: 1957125638
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1691711569	Actual: 1691711569
+TEST PASSED
+
+Skipping tested player
+Testing player #2
+Testing other player's hand count(s)
+Expected: 1875971474	Actual: 1875971474
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -1605689839	Actual: -1605689839
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1082417332	Actual: 1082417332
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 15	Actual: 16
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 40	Actual <= 36
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 4	Actual: 4
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 5307198	Actual: 5307198
+TEST PASSED
+
+Testing duchy
+Expected: -1413562265	Actual: -1413562265
+TEST PASSED
+
+Testing estate
+Expected: -1413562265	Actual: -1413562265
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: 817370690	Actual: 817370690
+TEST PASSED
+
+Testing pile# 1
+Expected: 1912175447	Actual: 1912175447
+TEST PASSED
+
+Testing pile# 2
+Expected: -1413562265	Actual: -1413562265
+TEST PASSED
+
+Testing pile# 3
+Expected: 5307198	Actual: 5307198
+TEST PASSED
+
+Testing pile# 4
+Expected: 828460379	Actual: 828460379
+TEST PASSED
+
+Testing pile# 5
+Expected: -935268975	Actual: -935268975
+TEST PASSED
+
+Testing pile# 6
+Expected: -391524903	Actual: -391524903
+TEST PASSED
+
+Testing pile# 7
+Expected: 1533663483	Actual: 1533663483
+TEST PASSED
+
+Testing pile# 8
+Expected: -1132994260	Actual: -1132994260
+TEST PASSED
+
+Testing pile# 9
+Expected: 1333734030	Actual: 1333734030
+TEST PASSED
+
+Testing pile# 10
+Expected: -972772698	Actual: -972772698
+TEST PASSED
+
+Testing pile# 11
+Expected: 1919579186	Actual: 1919579186
+TEST PASSED
+
+Testing pile# 12
+Expected: 486377970	Actual: 486377970
+TEST PASSED
+
+Testing pile# 13
+Expected: 1180508570	Actual: 1180508570
+TEST PASSED
+
+Testing pile# 14
+Expected: -1597938623	Actual: -1597938623
+TEST PASSED
+
+Testing pile# 15
+Expected: 1518005609	Actual: 1518005609
+TEST PASSED
+
+Testing pile# 16
+Expected: -748339291	Actual: -748339291
+TEST PASSED
+
+Testing pile# 17
+Expected: 441454359	Actual: 441454359
+TEST PASSED
+
+Testing pile# 18
+Expected: 1676753162	Actual: 1676753162
+TEST PASSED
+
+Testing pile# 19
+Expected: 264532622	Actual: 264532622
+TEST PASSED
+
+Testing pile# 20
+Expected: -215987196	Actual: -215987196
+TEST PASSED
+
+Testing pile# 21
+Expected: 1449547522	Actual: 1449547522
+TEST PASSED
+
+Testing pile# 22
+Expected: 334146163	Actual: 334146163
+TEST PASSED
+
+Testing pile# 23
+Expected: 5390199	Actual: 5390199
+TEST PASSED
+
+Testing pile# 24
+Expected: -1468106348	Actual: -1468106348
+TEST PASSED
+
+Testing pile# 25
+Expected: 96883100	Actual: 96883100
+TEST PASSED
+
+Testing pile# 26
+Expected: 2065180581	Actual: 2065180581
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: -2107050712	Actual: -2107050712
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 735446036	Actual: 735446036
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 40842925	Actual: 40842925
+TEST PASSED
+
+Skipping tested player
+Testing player #2
+Testing other player's hand count(s)
+Expected: -70051459	Actual: -70051459
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -1489330764	Actual: -1489330764
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1037444130	Actual: 1037444130
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 50	Actual: 51
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 182	Actual <= 169
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 7	Actual: 7
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 1176432193	Actual: 1176432193
+TEST PASSED
+
+Testing duchy
+Expected: -847512417	Actual: -847512417
+TEST PASSED
+
+Testing estate
+Expected: -847512417	Actual: -847512417
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: 945211064	Actual: 945211064
+TEST PASSED
+
+Testing pile# 1
+Expected: -111545081	Actual: -111545081
+TEST PASSED
+
+Testing pile# 2
+Expected: -847512417	Actual: -847512417
+TEST PASSED
+
+Testing pile# 3
+Expected: 1176432193	Actual: 1176432193
+TEST PASSED
+
+Testing pile# 4
+Expected: 776181083	Actual: 776181083
+TEST PASSED
+
+Testing pile# 5
+Expected: 1744670007	Actual: 1744670007
+TEST PASSED
+
+Testing pile# 6
+Expected: 1076213938	Actual: 1076213938
+TEST PASSED
+
+Testing pile# 7
+Expected: 1642805382	Actual: 1642805382
+TEST PASSED
+
+Testing pile# 8
+Expected: 1606313922	Actual: 1606313922
+TEST PASSED
+
+Testing pile# 9
+Expected: -1344673110	Actual: -1344673110
+TEST PASSED
+
+Testing pile# 10
+Expected: -175041713	Actual: -175041713
+TEST PASSED
+
+Testing pile# 11
+Expected: 14850313	Actual: 14850313
+TEST PASSED
+
+Testing pile# 12
+Expected: 2094251119	Actual: 2094251119
+TEST PASSED
+
+Testing pile# 13
+Expected: 1415369880	Actual: 1415369880
+TEST PASSED
+
+Testing pile# 14
+Expected: 554450483	Actual: 554450483
+TEST PASSED
+
+Testing pile# 15
+Expected: -1750393977	Actual: -1750393977
+TEST PASSED
+
+Testing pile# 16
+Expected: -759430779	Actual: -759430779
+TEST PASSED
+
+Testing pile# 17
+Expected: 1828284158	Actual: 1828284158
+TEST PASSED
+
+Testing pile# 18
+Expected: 1825193854	Actual: 1825193854
+TEST PASSED
+
+Testing pile# 19
+Expected: -1102701668	Actual: -1102701668
+TEST PASSED
+
+Testing pile# 20
+Expected: 1504718581	Actual: 1504718581
+TEST PASSED
+
+Testing pile# 21
+Expected: 1715220709	Actual: 1715220709
+TEST PASSED
+
+Testing pile# 22
+Expected: -181579439	Actual: -181579439
+TEST PASSED
+
+Testing pile# 23
+Expected: 412243912	Actual: 412243912
+TEST PASSED
+
+Testing pile# 24
+Expected: 2100478175	Actual: 2100478175
+TEST PASSED
+
+Testing pile# 25
+Expected: 789925509	Actual: 789925509
+TEST PASSED
+
+Testing pile# 26
+Expected: -2118438492	Actual: -2118438492
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: 507949034	Actual: 507949034
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -1395724073	Actual: -1395724073
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: -1855849207	Actual: -1855849207
+TEST PASSED
+
+Skipping tested player
+Testing player #2
+Testing other player's hand count(s)
+Expected: 1078706320	Actual: 1078706320
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 528326040	Actual: 528326040
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: -129112148	Actual: -129112148
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 33	Actual: 34
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 20	Actual <= 12
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 8	Actual: 8
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 1177950746	Actual: 1177950746
+TEST PASSED
+
+Testing duchy
+Expected: 1017459423	Actual: 1017459423
+TEST PASSED
+
+Testing estate
+Expected: 1017459423	Actual: 1017459423
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: -2074969330	Actual: -2074969330
+TEST PASSED
+
+Testing pile# 1
+Expected: -1877387356	Actual: -1877387356
+TEST PASSED
+
+Testing pile# 2
+Expected: 1017459423	Actual: 1017459423
+TEST PASSED
+
+Testing pile# 3
+Expected: 1177950746	Actual: 1177950746
+TEST PASSED
+
+Testing pile# 4
+Expected: 1341890118	Actual: 1341890118
+TEST PASSED
+
+Testing pile# 5
+Expected: -96952610	Actual: -96952610
+TEST PASSED
+
+Testing pile# 6
+Expected: 1820216152	Actual: 1820216152
+TEST PASSED
+
+Testing pile# 7
+Expected: -1724862542	Actual: -1724862542
+TEST PASSED
+
+Testing pile# 8
+Expected: -1654762674	Actual: -1654762674
+TEST PASSED
+
+Testing pile# 9
+Expected: -1815627484	Actual: -1815627484
+TEST PASSED
+
+Testing pile# 10
+Expected: 31163882	Actual: 31163882
+TEST PASSED
+
+Testing pile# 11
+Expected: -796670158	Actual: -796670158
+TEST PASSED
+
+Testing pile# 12
+Expected: -444626664	Actual: -444626664
+TEST PASSED
+
+Testing pile# 13
+Expected: 1995722349	Actual: 1995722349
+TEST PASSED
+
+Testing pile# 14
+Expected: -1132732769	Actual: -1132732769
+TEST PASSED
+
+Testing pile# 15
+Expected: -1024550731	Actual: -1024550731
+TEST PASSED
+
+Testing pile# 16
+Expected: 974254641	Actual: 974254641
+TEST PASSED
+
+Testing pile# 17
+Expected: 33683190	Actual: 33683190
+TEST PASSED
+
+Testing pile# 18
+Expected: 399075503	Actual: 399075503
+TEST PASSED
+
+Testing pile# 19
+Expected: -527489591	Actual: -527489591
+TEST PASSED
+
+Testing pile# 20
+Expected: 1903141819	Actual: 1903141819
+TEST PASSED
+
+Testing pile# 21
+Expected: 56542952	Actual: 56542952
+TEST PASSED
+
+Testing pile# 22
+Expected: -730695154	Actual: -730695154
+TEST PASSED
+
+Testing pile# 23
+Expected: 1716681069	Actual: 1716681069
+TEST PASSED
+
+Testing pile# 24
+Expected: 1323846138	Actual: 1323846138
+TEST PASSED
+
+Testing pile# 25
+Expected: 1108632004	Actual: 1108632004
+TEST PASSED
+
+Testing pile# 26
+Expected: -1889912816	Actual: -1889912816
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+
+Skipping tested player
+Testing player #1
+Testing other player's hand count(s)
+Expected: 1723599394	Actual: 1723599394
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 173163096	Actual: 173163096
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1560214590	Actual: 1560214590
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 180	Actual: 181
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 61	Actual <= 58
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 18	Actual: 18
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 373236135	Actual: 373236135
+TEST PASSED
+
+Testing duchy
+Expected: -149437973	Actual: -149437973
+TEST PASSED
+
+Testing estate
+Expected: -149437973	Actual: -149437973
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: -1206360197	Actual: -1206360197
+TEST PASSED
+
+Testing pile# 1
+Expected: -347014584	Actual: -347014584
+TEST PASSED
+
+Testing pile# 2
+Expected: -149437973	Actual: -149437973
+TEST PASSED
+
+Testing pile# 3
+Expected: 373236135	Actual: 373236135
+TEST PASSED
+
+Testing pile# 4
+Expected: 760075739	Actual: 760075739
+TEST PASSED
+
+Testing pile# 5
+Expected: -729377018	Actual: -729377018
+TEST PASSED
+
+Testing pile# 6
+Expected: -980806428	Actual: -980806428
+TEST PASSED
+
+Testing pile# 7
+Expected: -1961354608	Actual: -1961354608
+TEST PASSED
+
+Testing pile# 8
+Expected: -1106535592	Actual: -1106535592
+TEST PASSED
+
+Testing pile# 9
+Expected: -758377546	Actual: -758377546
+TEST PASSED
+
+Testing pile# 10
+Expected: -1160566750	Actual: -1160566750
+TEST PASSED
+
+Testing pile# 11
+Expected: -663131378	Actual: -663131378
+TEST PASSED
+
+Testing pile# 12
+Expected: -417831318	Actual: -417831318
+TEST PASSED
+
+Testing pile# 13
+Expected: 317445638	Actual: 317445638
+TEST PASSED
+
+Testing pile# 14
+Expected: -1910672604	Actual: -1910672604
+TEST PASSED
+
+Testing pile# 15
+Expected: -1904528807	Actual: -1904528807
+TEST PASSED
+
+Testing pile# 16
+Expected: -1751235556	Actual: -1751235556
+TEST PASSED
+
+Testing pile# 17
+Expected: -1589447452	Actual: -1589447452
+TEST PASSED
+
+Testing pile# 18
+Expected: 278844532	Actual: 278844532
+TEST PASSED
+
+Testing pile# 19
+Expected: 390465065	Actual: 390465065
+TEST PASSED
+
+Testing pile# 20
+Expected: 1965164423	Actual: 1965164423
+TEST PASSED
+
+Testing pile# 21
+Expected: -535270932	Actual: -535270932
+TEST PASSED
+
+Testing pile# 22
+Expected: 785884187	Actual: 785884187
+TEST PASSED
+
+Testing pile# 23
+Expected: 1945453017	Actual: 1945453017
+TEST PASSED
+
+Testing pile# 24
+Expected: -1942472906	Actual: -1942472906
+TEST PASSED
+
+Testing pile# 25
+Expected: 1510101253	Actual: 1510101253
+TEST PASSED
+
+Testing pile# 26
+Expected: 1887259943	Actual: 1887259943
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+Testing player #0
+Testing other player's hand count(s)
+Expected: 1112732543	Actual: 1112732543
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 268954487	Actual: 268954487
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: -586179123	Actual: -586179123
+TEST PASSED
+Testing player #1
+Testing other player's hand count(s)
+Expected: -592866714	Actual: -592866714
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -1444830575	Actual: -1444830575
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1725398602	Actual: 1725398602
+TEST PASSED
+
+Skipping tested player
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 115	Actual: 116
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 294	Actual <= 284
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 17	Actual: 17
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 891429116	Actual: 891429116
+TEST PASSED
+
+Testing duchy
+Expected: -249628272	Actual: -249628272
+TEST PASSED
+
+Testing estate
+Expected: -249628272	Actual: -249628272
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: 260479968	Actual: 260479968
+TEST PASSED
+
+Testing pile# 1
+Expected: 259054616	Actual: 259054616
+TEST PASSED
+
+Testing pile# 2
+Expected: -249628272	Actual: -249628272
+TEST PASSED
+
+Testing pile# 3
+Expected: 891429116	Actual: 891429116
+TEST PASSED
+
+Testing pile# 4
+Expected: 1104588818	Actual: 1104588818
+TEST PASSED
+
+Testing pile# 5
+Expected: 828563262	Actual: 828563262
+TEST PASSED
+
+Testing pile# 6
+Expected: 202681826	Actual: 202681826
+TEST PASSED
+
+Testing pile# 7
+Expected: -1040873457	Actual: -1040873457
+TEST PASSED
+
+Testing pile# 8
+Expected: 1384207119	Actual: 1384207119
+TEST PASSED
+
+Testing pile# 9
+Expected: -1750535029	Actual: -1750535029
+TEST PASSED
+
+Testing pile# 10
+Expected: -1140433336	Actual: -1140433336
+TEST PASSED
+
+Testing pile# 11
+Expected: 1718016517	Actual: 1718016517
+TEST PASSED
+
+Testing pile# 12
+Expected: -1365196297	Actual: -1365196297
+TEST PASSED
+
+Testing pile# 13
+Expected: -989998380	Actual: -989998380
+TEST PASSED
+
+Testing pile# 14
+Expected: -509672705	Actual: -509672705
+TEST PASSED
+
+Testing pile# 15
+Expected: 82543952	Actual: 82543952
+TEST PASSED
+
+Testing pile# 16
+Expected: -239857888	Actual: -239857888
+TEST PASSED
+
+Testing pile# 17
+Expected: 946044686	Actual: 946044686
+TEST PASSED
+
+Testing pile# 18
+Expected: 412051109	Actual: 412051109
+TEST PASSED
+
+Testing pile# 19
+Expected: 864975179	Actual: 864975179
+TEST PASSED
+
+Testing pile# 20
+Expected: -2101946836	Actual: -2101946836
+TEST PASSED
+
+Testing pile# 21
+Expected: 597361043	Actual: 597361043
+TEST PASSED
+
+Testing pile# 22
+Expected: 1761408723	Actual: 1761408723
+TEST PASSED
+
+Testing pile# 23
+Expected: 1684768627	Actual: 1684768627
+TEST PASSED
+
+Testing pile# 24
+Expected: 1182608716	Actual: 1182608716
+TEST PASSED
+
+Testing pile# 25
+Expected: -1980051271	Actual: -1980051271
+TEST PASSED
+
+Testing pile# 26
+Expected: -1062556372	Actual: -1062556372
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+
+Skipping tested player
+Testing player #1
+Testing other player's hand count(s)
+Expected: 714870472	Actual: 714870472
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: -1120322833	Actual: -1120322833
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 145008089	Actual: 145008089
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+
+Test hand count for player A
+Expected: 4	Actual: 5
+TEST FAILED
+c
+
+Test deck count has decreased by at least 2
+Expected <= 439	Actual <= 415
+TEST PASSED
+d
+
+Testing that 2 treasure cards were drawn
+Expected: 3	Actual: 3
+TEST PASSED
+
+Testing that victory card piles remain unchanged
+
+Testing province
+Expected: 687489778	Actual: 687489778
+TEST PASSED
+
+Testing duchy
+Expected: 1874405870	Actual: 1874405870
+TEST PASSED
+
+Testing estate
+Expected: 1874405870	Actual: 1874405870
+TEST PASSED
+
+Testing that kingdom card piles remain unchanged
+
+Testing pile# 0
+Expected: -1296317804	Actual: -1296317804
+TEST PASSED
+
+Testing pile# 1
+Expected: 1162017785	Actual: 1162017785
+TEST PASSED
+
+Testing pile# 2
+Expected: 1874405870	Actual: 1874405870
+TEST PASSED
+
+Testing pile# 3
+Expected: 687489778	Actual: 687489778
+TEST PASSED
+
+Testing pile# 4
+Expected: -1609565184	Actual: -1609565184
+TEST PASSED
+
+Testing pile# 5
+Expected: -311851883	Actual: -311851883
+TEST PASSED
+
+Testing pile# 6
+Expected: 1150698237	Actual: 1150698237
+TEST PASSED
+
+Testing pile# 7
+Expected: -839055940	Actual: -839055940
+TEST PASSED
+
+Testing pile# 8
+Expected: -1904613319	Actual: -1904613319
+TEST PASSED
+
+Testing pile# 9
+Expected: 1263970772	Actual: 1263970772
+TEST PASSED
+
+Testing pile# 10
+Expected: 2044230211	Actual: 2044230211
+TEST PASSED
+
+Testing pile# 11
+Expected: -1130504892	Actual: -1130504892
+TEST PASSED
+
+Testing pile# 12
+Expected: -1917810024	Actual: -1917810024
+TEST PASSED
+
+Testing pile# 13
+Expected: 466791810	Actual: 466791810
+TEST PASSED
+
+Testing pile# 14
+Expected: 471020168	Actual: 471020168
+TEST PASSED
+
+Testing pile# 15
+Expected: 1661221385	Actual: 1661221385
+TEST PASSED
+
+Testing pile# 16
+Expected: 521102585	Actual: 521102585
+TEST PASSED
+
+Testing pile# 17
+Expected: 667436030	Actual: 667436030
+TEST PASSED
+
+Testing pile# 18
+Expected: -1738897822	Actual: -1738897822
+TEST PASSED
+
+Testing pile# 19
+Expected: -1921968493	Actual: -1921968493
+TEST PASSED
+
+Testing pile# 20
+Expected: 1219693205	Actual: 1219693205
+TEST PASSED
+
+Testing pile# 21
+Expected: 1501720769	Actual: 1501720769
+TEST PASSED
+
+Testing pile# 22
+Expected: -540559651	Actual: -540559651
+TEST PASSED
+
+Testing pile# 23
+Expected: 96413853	Actual: 96413853
+TEST PASSED
+
+Testing pile# 24
+Expected: 1436817817	Actual: 1436817817
+TEST PASSED
+
+Testing pile# 25
+Expected: 1440894322	Actual: 1440894322
+TEST PASSED
+
+Testing pile# 26
+Expected: 294667887	Actual: 294667887
+TEST PASSED
+
+Testing that there was no effect on other player(s)
+
+Skipping tested player
+Testing player #1
+Testing other player's hand count(s)
+Expected: -1707002904	Actual: -1707002904
+TEST PASSED
+
+Testing other player's deck count(s)
+Expected: 1785329563	Actual: 1785329563
+TEST PASSED
+
+Testing other player's discard count(s)
+Expected: 1754439197	Actual: 1754439197
+TEST PASSED
+
+FINAL RESULT: ALL TESTS PASSED
+10 Tests Failed over 10 runs of test suite.
+File 'randomtestadventurer.c'
+Lines executed:95.07% of 142
+Creating 'randomtestadventurer.c.gcov'
+
+File 'dominion.c'
+Lines executed:6.46% of 557
+Creating 'dominion.c.gcov'
+
         -:    0:Source:dominion.c
         -:    0:Graph:dominion.gcno
         -:    0:Data:dominion.gcda

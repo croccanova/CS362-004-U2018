@@ -1,0 +1,125 @@
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:unittest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2:	Christian Roccanova
+        -:    3:	CS362-400
+        -:    4:	Assignment 3
+        -:    5:	tests updateCoins()
+        -:    6:*/
+        -:    7:
+        -:    8:#include "dominion.h"
+        -:    9:#include "dominion_helpers.h"
+        -:   10:#include <stdio.h>
+        -:   11:#include "rngs.h"
+        -:   12:
+        -:   13:// counter for total number of failures
+        -:   14:int failCount = 0;
+        -:   15:
+        -:   16:// checks if two values are equivalent
+        5:   17:void isTrue(int a, int b)
+        -:   18:{
+        5:   19:	if (a == b)
+        -:   20:	{
+        5:   21:		printf("TEST PASSED\n");
+        -:   22:	}
+        -:   23:	else
+        -:   24:	{
+    #####:   25:		printf("TEST FAILED\n");
+    #####:   26:		failCount++;
+        -:   27:	}
+        5:   28:}
+        -:   29:
+        1:   30:int main(int argc, char** argv) 
+        -:   31:{
+        -:   32:	struct gameState g;
+        1:   33:	int numPlayers = 2;
+        1:   34:	int seed = 1000;
+        1:   35:	int k[] = {adventurer, council_room, feast, gardens, mine
+        -:   36:		, remodel, smithy, village, baron, great_hall};
+        1:   37:	int bonus = 0;
+        -:   38:	int actual;
+        -:   39:	int expected;
+        -:   40:		
+        -:   41:	//fills arrays with respective treasure cards
+      501:   42:	for (int i = 0; i < MAX_HAND; i++) 
+        -:   43:	{
+      500:   44:		g.hand[0][i] = adventurer;
+        -:   45:	}
+        -:   46:
+        1:   47:	initializeGame(numPlayers, k, seed, &g);
+        1:   48:	g.handCount[0] = 5;
+        -:   49:
+        1:   50:	printf("Running tests for updateCoins() function\n");
+        -:   51:	
+        -:   52:	//test hand with 0 coin cards
+        1:   53:	printf("Test with 0 coins");	
+        6:   54:	for (int i = 0; i < 5; i++)
+        -:   55:	{
+        5:   56:		g.hand[0][i] = smithy;
+        -:   57:	}
+        1:   58:	updateCoins(0, &g, bonus);
+        1:   59:	expected = 0;
+        1:   60:	actual = g.coins;
+        1:   61:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   62:	isTrue(expected, actual);
+        -:   63:
+        -:   64:	//test with 5 coppers
+        1:   65:	printf("\nTesting with 5 coppers, no bonus - expect 5\n");
+        6:   66:	for (int i = 0; i < 5; i++)
+        -:   67:	{
+        5:   68:		g.hand[0][i] = copper;
+        -:   69:	}
+        1:   70:	updateCoins(0, &g, bonus);
+        1:   71:	actual = g.coins;
+        1:   72:	expected = 5;
+        1:   73:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   74:	isTrue(expected, actual);
+        -:   75:
+        -:   76:	//test with 5 silver
+        1:   77:	printf("\nTesting with 5 silvers, no bonus - expect 10\n");
+        6:   78:	for (int i = 0; i < 5; i++)
+        -:   79:	{
+        5:   80:		g.hand[0][i] = silver;
+        -:   81:	}
+        1:   82:	updateCoins(0, &g, bonus);
+        1:   83:	actual = g.coins;
+        1:   84:	expected = 10;
+        1:   85:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   86:	isTrue(expected, actual);
+        -:   87:
+        -:   88:	//test with 5 golds
+        1:   89:	printf("\nTesting with 5 golds, no bonus - expect 15\n");
+        6:   90:	for (int i = 0; i < 5; i++)
+        -:   91:	{
+        5:   92:		g.hand[0][i] = gold;
+        -:   93:	}
+        1:   94:	updateCoins(0, &g, bonus);
+        1:   95:	actual = g.coins;
+        1:   96:	expected = 15;
+        1:   97:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   98:	isTrue(expected, actual);
+        -:   99:
+        -:  100:	//test bonus
+        1:  101:	printf("\nTesting 5 golds, +5 bonus - expect 20\n");
+        1:  102:	bonus = 5;
+        1:  103:	updateCoins(0, &g, bonus);
+        1:  104:	actual = g.coins;
+        1:  105:	expected = 20;
+        1:  106:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:  107:	isTrue(expected, actual);
+        -:  108:
+        1:  109:	if (failCount > 0)
+        -:  110:	{
+    #####:  111:		printf("\nFINAL RESULT: TEST FAILED\n");
+    #####:  112:		printf("Number of tests failed: %d\n", failCount);
+        -:  113:	}
+        -:  114:	else
+        -:  115:	{
+        1:  116:		printf("\nFINAL RESULT: ALL TESTS PASSED\n");
+        -:  117:	}
+        -:  118:
+        1:  119:	return 0;
+        -:  120:}

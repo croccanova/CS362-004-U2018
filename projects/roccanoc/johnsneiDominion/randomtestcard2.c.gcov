@@ -1,0 +1,223 @@
+        -:    0:Source:randomtestcard2.c
+        -:    0:Graph:randomtestcard2.gcno
+        -:    0:Data:randomtestcard2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2:	Christian Roccanova
+        -:    3:	CS362-400
+        -:    4:	Assignment 4
+        -:    5:	Random tester for the Great Hall card
+        -:    6:*/
+        -:    7:
+        -:    8:#include <stdlib.h>
+        -:    9:#include <stdio.h>
+        -:   10:#include <string.h>
+        -:   11:#include "dominion_helpers.h"
+        -:   12:#include "rngs.h"
+        -:   13:#include <math.h>
+        -:   14:#include <time.h>
+        -:   15:
+        -:   16:void randomizeState(struct gameState *state);
+        -:   17:int randInt(int min, int max);
+        -:   18:
+        -:   19:// counter for total number of failures
+        -:   20:int failCount = 0;
+        -:   21:
+        -:   22:// checks if two values are equivalent
+     3756:   23:void isTrue(int a, int b)
+        -:   24:{
+     3756:   25:	if (a == b)
+        -:   26:	{
+     3556:   27:		printf("TEST PASSED\n");
+        -:   28:	}
+        -:   29:	else
+        -:   30:	{
+      200:   31:		printf("TEST FAILED\n");
+      200:   32:		failCount++;
+        -:   33:	}
+     3756:   34:}
+        -:   35:
+        -:   36:// randomly initialize game state
+      100:   37:void randomizeState(struct gameState *state)
+        -:   38:{
+  2630100:   39:	for (int i = 0; i < sizeof(struct gameState); i++) {
+  2630000:   40:		((char*)state)[i] = floor(Random() * 256);
+        -:   41:	}
+        -:   42:
+        -:   43:	// randomize player count and selected player
+      100:   44:	int numPlayers = randInt(2, MAX_PLAYERS);
+      100:   45:	int playerNumber = randInt(0, numPlayers);
+        -:   46:
+        -:   47:	// fill gameState data members
+      100:   48:	state->numPlayers = numPlayers;
+      100:   49:	state->whoseTurn = playerNumber;
+      100:   50:	state->deckCount[playerNumber] = randInt(3, MAX_DECK);
+      100:   51:	state->discardCount[playerNumber] = randInt(0, MAX_DECK - state->deckCount[playerNumber]);
+      100:   52:	state->handCount[playerNumber] = randInt(0, MAX_DECK - state->deckCount[playerNumber] - state->discardCount[playerNumber]);
+      100:   53:	state->playedCardCount = 0;
+        -:   54:
+        -:   55:
+        -:   56:	// randomize cards in deck, discard pile, and hand
+    25279:   57:	for (int i = 0; i < state->deckCount[playerNumber]; i++)
+        -:   58:	{
+    25179:   59:		state->deck[playerNumber][i] = randInt(curse, treasure_map);
+        -:   60:	}
+    12677:   61:	for (int i = 0; i < state->discardCount[playerNumber]; i++)
+        -:   62:	{	
+    12577:   63:		state->discard[playerNumber][i] = randInt(curse, treasure_map);
+        -:   64:	}
+     6139:   65:	for (int i = 0; i < state->handCount[playerNumber]; i++) 
+        -:   66:	{
+     6039:   67:		state->hand[playerNumber][i] = randInt(curse, treasure_map);
+        -:   68:	}
+      100:   69:}
+        -:   70:
+        -:   71:
+        -:   72://returns a random integer within given range
+        -:   73://source: http://c-faq.com/lib/randrange.html
+    44795:   74:int randInt(int min, int max) 
+        -:   75:{
+    44795:   76:	double r = rand();
+    44795:   77:	return (int)(min + r * (max - min) / (double)RAND_MAX);
+        -:   78:}
+        -:   79:
+      100:   80:void greatHallTest(struct gameState control, int failCount)
+        -:   81:{
+        -:   82:	//make copy of gameState to run through the tests
+        -:   83:	struct gameState test;
+      100:   84:	test = control;
+        -:   85:
+        -:   86:	//initialize cardEffect parameters to random values using randi from randomhelpers
+      100:   87:	int c1 = randInt(curse, treasure_map);
+      100:   88:	int c2 = randInt(curse, treasure_map);
+      100:   89:	int c3 = randInt(curse, treasure_map);
+      100:   90:	int playerNum = control.whoseTurn;
+      100:   91:	int handPos = randInt(0, control.handCount[playerNum]);
+      100:   92:	int bonus = randInt(0, MAX_DECK);
+        -:   93:	int actual, expected;
+        -:   94:
+      100:   95:	cardEffect(great_hall, c1, c2, c3, &test, handPos, &bonus);
+        -:   96:
+        -:   97:	//test hand count
+      100:   98:	printf("\nTesting hand count\n");
+      100:   99:	expected = control.handCount[playerNum]; //1 cards gained, 1 card played
+      100:  100:	actual = test.handCount[playerNum];
+      100:  101:	printf("Expected: %d	Actual: %d\n", expected, actual);
+      100:  102:	isTrue(expected, actual);
+        -:  103:
+        -:  104:	//test deck count
+      100:  105:	printf("\nTesting deck count\n"); //deck decreases by 1
+      100:  106:	expected = control.deckCount[playerNum] - 1;
+      100:  107:	actual = test.deckCount[playerNum];
+      100:  108:	printf("Expected: %d	Actual: %d\n", expected, actual);
+      100:  109:	isTrue(expected, actual);
+        -:  110:
+        -:  111:	//test action count
+      100:  112:	printf("\nTesting that action count increases\n");
+      100:  113:	expected = control.numActions + 1; //1 bonus action gained
+      100:  114:	actual = test.numActions;
+      100:  115:	printf("Expected: %d	Actual: %d\n", expected, actual);
+      100:  116:	isTrue(expected, actual);
+        -:  117:
+        -:  118:	//Tests to ensure victory cards are unchanged
+      100:  119:	printf("\nTesting that victory card piles remain unchanged\n");
+      100:  120:	printf("\nTesting province\n");
+      100:  121:	actual = test.supplyCount[province];
+      100:  122:	expected = control.supplyCount[province];
+      100:  123:	printf("Expected: %d	Actual: %d\n", expected, actual);
+      100:  124:	isTrue(expected, actual);
+        -:  125:
+      100:  126:	printf("\nTesting duchy\n");
+      100:  127:	actual = test.supplyCount[duchy];
+      100:  128:	expected = control.supplyCount[duchy];
+      100:  129:	printf("Expected: %d	Actual: %d\n", expected, actual);
+      100:  130:	isTrue(expected, actual);
+        -:  131:
+      100:  132:	printf("\nTesting estate\n");
+      100:  133:	actual = test.supplyCount[duchy];
+      100:  134:	expected = control.supplyCount[duchy];
+      100:  135:	printf("Expected: %d	Actual: %d\n", expected, actual);
+      100:  136:	isTrue(expected, actual);
+        -:  137:
+        -:  138:	//Tests to ensure kingdom cards are unchanged
+      100:  139:	printf("\nTesting that kingdom card piles remain unchanged\n");
+     2800:  140:	for (int i = 0; i < treasure_map + 1; i++)
+        -:  141:	{
+     2700:  142:		printf("\nTesting pile# %d\n", i);
+     2700:  143:		actual = test.supplyCount[i];
+     2700:  144:		expected = control.supplyCount[i];
+     2700:  145:		printf("Expected: %d	Actual: %d\n", expected, actual);
+     2700:  146:		isTrue(expected, actual);
+        -:  147:	}
+        -:  148:
+        -:  149:	//Tests to ensure other player is not affected
+      100:  150:	printf("\nTesting that there was no effect on other player(s)\n");
+      352:  151:	for (int i = 0; i < control.numPlayers; i++)
+        -:  152:	{
+      252:  153:		if (i == playerNum)
+        -:  154:		{
+      100:  155:			printf("\nSkipping tested player\n");
+      100:  156:			continue;
+        -:  157:		}
+        -:  158:		else
+        -:  159:		{
+      152:  160:			printf("Testing player #%d\n", i);
+      152:  161:			printf("Testing other player's hand count(s)\n");
+      152:  162:			actual = test.handCount[i];
+      152:  163:			expected = control.handCount[i];
+      152:  164:			printf("Expected: %d	Actual: %d\n", expected, actual);
+      152:  165:			isTrue(expected, actual);
+        -:  166:
+      152:  167:			printf("\nTesting other player's deck count(s)\n");
+      152:  168:			actual = test.deckCount[i];
+      152:  169:			expected = control.deckCount[i];
+      152:  170:			printf("Expected: %d	Actual: %d\n", expected, actual);
+      152:  171:			isTrue(expected, actual);
+        -:  172:
+      152:  173:			printf("\nTesting other player's discard count(s)\n");
+      152:  174:			actual = test.discardCount[i];
+      152:  175:			expected = control.discardCount[i];
+      152:  176:			printf("Expected: %d	Actual: %d\n", expected, actual);
+      152:  177:			isTrue(expected, actual);
+        -:  178:		}
+        -:  179:	}
+        -:  180:
+      100:  181:	if (failCount > 0)
+        -:  182:	{
+    #####:  183:		printf("\nFINAL RESULT: TEST FAILED\n");
+    #####:  184:		printf("Number of tests failed: %d\n", failCount);
+        -:  185:	}
+        -:  186:	else
+        -:  187:	{
+      100:  188:		printf("\nFINAL RESULT: ALL TESTS PASSED\n");
+        -:  189:	}
+      100:  190:}
+        -:  191:
+        1:  192:int main(int argc, char** argv)
+        -:  193:{
+        1:  194:	srand(time(NULL));
+        -:  195:
+        1:  196:	printf("Running tests for Great Hall card.\n");
+        1:  197:	int testCount = 100;
+        1:  198:	int totalFails = 0;
+        -:  199:	struct gameState g;
+      101:  200:	for (int i = 0; i < testCount; i++)
+        -:  201:	{
+      100:  202:		failCount = 0;
+      100:  203:		randomizeState(&g);
+      100:  204:		greatHallTest(g, failCount);
+      100:  205:		totalFails += failCount;
+        -:  206:	}
+        -:  207:
+        1:  208:	if (totalFails > 0)
+        -:  209:	{
+        1:  210:		printf("%d Tests Failed over %d runs of test suite.\n", totalFails, testCount);
+        -:  211:	}
+        -:  212:	else
+        -:  213:	{
+    #####:  214:		printf("All tests passed!\n");
+        -:  215:	}
+        -:  216:
+        1:  217:	return 0;
+        -:  218:}

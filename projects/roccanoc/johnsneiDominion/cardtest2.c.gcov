@@ -1,0 +1,138 @@
+        -:    0:Source:cardtest2.c
+        -:    0:Graph:cardtest2.gcno
+        -:    0:Data:cardtest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2:	Christian Roccanova
+        -:    3:	CS362-400
+        -:    4:	Assignment 3	
+        -:    5:	Tests smithy card
+        -:    6:*/
+        -:    7:
+        -:    8:#include "dominion.h"
+        -:    9:#include "dominion_helpers.h"
+        -:   10:#include <stdio.h>
+        -:   11:#include "rngs.h"
+        -:   12:
+        -:   13:
+        -:   14:// counter for total number of failures
+        -:   15:int failCount = 0;
+        -:   16:
+        -:   17:// checks if two values are equivalent
+       18:   18:void isTrue(int a, int b) 
+        -:   19:{
+       18:   20:	if (a == b) 
+        -:   21:	{
+       16:   22:		printf("TEST PASSED\n");
+        -:   23:	}
+        -:   24:	else 
+        -:   25:	{
+        2:   26:		printf("TEST FAILED\n");
+        2:   27:		failCount++;
+        -:   28:	}
+       18:   29:}
+        -:   30:
+        -:   31:
+        1:   32:int main(int argc, char** argv) 
+        -:   33:{
+        -:   34:	//set arguments for initializeGame and cardEffect
+        -:   35:	struct gameState control, test;
+        1:   36:	int numPlayers = 2;
+        1:   37:	int handPos = 0, choice1 = -1, choice2 = -1, choice3 = -1, bonus = 0;
+        1:   38:	int seed = 1000;
+        1:   39:	int k[] = { adventurer, council_room, feast, gardens, mine,
+        -:   40:		remodel, smithy, village, baron, great_hall };
+        -:   41:	int expected;
+        -:   42:	int actual;
+        1:   43:	int playerA = 0;
+        1:   44:	int playerB = 1;
+        -:   45:
+        1:   46:	initializeGame(numPlayers, k, seed, &control);
+        -:   47:
+        -:   48:	// copy the game state, test will actually be run while control will be manually modified to represent the expected values
+        1:   49:	test = control;
+        -:   50:
+        1:   51:	printf("Running tests for smithy card\n");
+        -:   52:
+        1:   53:		cardEffect(smithy, choice1, choice2, choice3, &test, handPos, &bonus);
+        -:   54:
+        -:   55:		//test hand count
+        1:   56:		printf("\nTest hand count for player A\n");
+        1:   57:		expected = control.handCount[playerA] + 2; //3 cards drawn, 1 card played
+        1:   58:		actual = test.handCount[playerA];
+        1:   59:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   60:		isTrue(expected, actual);
+        -:   61:
+        -:   62:		//test deck count
+        1:   63:		printf("\nTest deck count for player A\n");
+        1:   64:		expected = control.deckCount[playerA] - 3;
+        1:   65:		actual = test.deckCount[playerA];
+        1:   66:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   67:		isTrue(expected, actual);
+        -:   68:
+        -:   69:		//Tests to ensure victory cards are unchanged
+        1:   70:		printf("\nTesting that victory card piles remain unchanged\n");
+        1:   71:		printf("\nTesting province\n");
+        1:   72:		actual = test.supplyCount[province];
+        1:   73:		expected = control.supplyCount[province];
+        1:   74:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   75:		isTrue(expected, actual);
+        -:   76:
+        1:   77:		printf("\nTesting duchy\n");
+        1:   78:		actual = test.supplyCount[duchy];
+        1:   79:		expected = control.supplyCount[duchy];
+        1:   80:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   81:		isTrue(expected, actual);
+        -:   82:
+        1:   83:		printf("\nTesting estate\n");
+        1:   84:		actual = test.supplyCount[duchy];
+        1:   85:		expected = control.supplyCount[duchy];
+        1:   86:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   87:		isTrue(expected, actual);
+        -:   88:
+        -:   89:		//Tests to ensure kingdom cards are unchanged
+        1:   90:		printf("\nTesting that kingdom card piles remain unchanged\n");
+       11:   91:		for (int i = 0; i < 10; i++)
+        -:   92:		{
+       10:   93:			printf("\nTesting pile# %d\n", i);
+       10:   94:			actual = test.supplyCount[k[i]];
+       10:   95:			expected = control.supplyCount[k[i]];
+       10:   96:			printf("Expected: %d	Actual: %d\n", expected, actual);
+       10:   97:			isTrue(expected, actual);
+        -:   98:		}
+        -:   99:
+        -:  100:		//Tests to ensure other player is not affected
+        1:  101:		printf("\nTesting that there was no effect on playerB\n");
+        1:  102:		printf("Testing playerB's hand count\n");
+        1:  103:		actual = test.handCount[playerB];
+        1:  104:		expected = control.handCount[playerB];
+        1:  105:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:  106:		isTrue(expected, actual);
+        -:  107:
+        1:  108:		printf("\nTesting playerB's deck count\n");
+        1:  109:		actual = test.deckCount[playerB];
+        1:  110:		expected = control.deckCount[playerB];
+        1:  111:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:  112:		isTrue(expected, actual);
+        -:  113:
+        1:  114:		printf("\nTesting playerB's discard count\n");
+        1:  115:		actual = test.discardCount[playerB];
+        1:  116:		expected = control.discardCount[playerB];
+        1:  117:		printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:  118:		isTrue(expected, actual);
+        -:  119:
+        1:  120:		if (failCount > 0)
+        -:  121:		{
+        1:  122:			printf("\nFINAL RESULT: TEST FAILED\n");
+        1:  123:			printf("Number of tests failed: %d\n", failCount);
+        -:  124:		}
+        -:  125:		else
+        -:  126:		{
+    #####:  127:			printf("\nFINAL RESULT: ALL TESTS PASSED\n");
+        -:  128:		}
+        -:  129:	
+        -:  130:
+        1:  131:	return 0;
+        -:  132:}
+        -:  133:

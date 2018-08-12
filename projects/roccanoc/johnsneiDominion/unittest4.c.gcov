@@ -1,0 +1,73 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2:	Christian Roccanova
+        -:    3:	CS362-400
+        -:    4:	Assignment 3
+        -:    5:	Tests getCost() function
+        -:    6:*/
+        -:    7:
+        -:    8:#include "dominion.h"
+        -:    9:#include "dominion_helpers.h"
+        -:   10:#include <stdio.h>
+        -:   11:#include "rngs.h"
+        -:   12:
+        -:   13:// counter for total number of failures
+        -:   14:int failCount = 0;
+        -:   15:
+        -:   16:// checks if two values are equivalent
+       28:   17:void isTrue(int a, int b) 
+        -:   18:{
+       28:   19:	if (a == b) 
+        -:   20:	{
+       28:   21:		printf("TEST PASSED\n");
+        -:   22:	}
+        -:   23:	else 
+        -:   24:	{
+    #####:   25:		printf("TEST FAILED\n");
+    #####:   26:		failCount++;
+        -:   27:	}
+       28:   28:}
+        -:   29:
+        1:   30:int main(int argc, char** argv) {
+        -:   31:
+        -:   32:	//card costs in order: curse, estate, duchy, province, copper, silver, gold, adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall, minion, steward, tribute, ambassador, cutpurse, embargo, outpost, salvager, sea_hag, treasure_map
+        1:   33:	int cardCost[27] = {0,2,5,8,0,3,6,6,5,4,4,5,4,4,3,4,3,5,3,5,3,4,2,5,4,4,4};
+        -:   34:	int expected;
+        -:   35:	int	actual;
+        -:   36:	
+        1:   37:	printf("Running tests for getCost() function\n");
+        -:   38:
+        -:   39:	//tests getCost for all cards present
+       28:   40:	for (int i = 0; i < 27; i++) 
+        -:   41:	{
+       27:   42:		printf("\nTesting card# %d\n", i);
+       27:   43:		actual = getCost(i);
+       27:   44:		expected = cardCost[i];		
+       27:   45:		printf("Expected: %d	Actual: %d\n", expected, actual);
+       27:   46:		isTrue(expected, actual);
+        -:   47:	}
+        -:   48:
+        -:   49:
+        -:   50:	//test with non-existent card - should return -1
+        1:   51:	printf("\nTesting invalid card\n");
+        1:   52:	actual = getCost(28);
+        1:   53:	expected = -1;
+        1:   54:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   55:	isTrue(expected, actual);
+        -:   56:
+        1:   57:	if (failCount > 0)
+        -:   58:	{
+    #####:   59:		printf("\nFINAL RESULT: TEST FAILED\n");
+    #####:   60:		printf("Number of tests failed: %d\n", failCount);
+        -:   61:	}
+        -:   62:	else
+        -:   63:	{
+        1:   64:		printf("\nFINAL RESULT: ALL TESTS PASSED\n");
+        -:   65:	}
+        -:   66:
+        1:   67:	return 0;
+        -:   68:}

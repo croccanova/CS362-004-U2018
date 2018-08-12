@@ -1,0 +1,99 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2:	Christian Roccanova
+        -:    3:	CS362-400
+        -:    4:	Assignment 3
+        -:    5:	Tests gainCard()
+        -:    6:*/ 
+        -:    7:
+        -:    8:#include "dominion.h"
+        -:    9:#include "dominion_helpers.h"
+        -:   10:#include <stdio.h>
+        -:   11:#include "rngs.h"
+        -:   12:
+        -:   13:// counter for total number of failures
+        -:   14:int failCount = 0;
+        -:   15:
+        -:   16:// checks if two values are equivalent
+        5:   17:void isTrue(int a, int b) 
+        -:   18:{
+        5:   19:	if (a == b) 
+        -:   20:	{
+        5:   21:		printf("TEST PASSED\n");
+        -:   22:	}
+        -:   23:	else 
+        -:   24:	{
+    #####:   25:		printf("TEST FAILED\n");
+    #####:   26:		failCount++;
+        -:   27:	}
+        5:   28:}
+        -:   29:
+        -:   30:
+        1:   31:int main(int argc, char** argv) {
+        -:   32:	
+        1:   33:	int seed = 1000;
+        1:   34:	int k[10] = { adventurer, council_room, feast, gardens, mine,
+        -:   35:		remodel, smithy, village, baron, great_hall };	
+        -:   36:	struct gameState g;
+        -:   37:	int actual;
+        -:   38:	int expected;
+        -:   39:
+        1:   40:	printf("Running tests for gainCard() function\n");
+        -:   41:
+        1:   42:	initializeGame(2, k, seed, &g);
+        -:   43:
+        -:   44:	//tests attempt to gain from an empty pile
+        1:   45:	printf("\nTesting empty pile\n");
+        1:   46:	g.supplyCount[smithy] = 0;
+        1:   47:	expected = -1;
+        1:   48:	actual = gainCard(smithy, &g, 0, 0);
+        1:   49:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   50:	isTrue(expected, actual);
+        1:   51:	g.supplyCount[smithy] = 10;
+        -:   52:
+        -:   53:	//tests that card is discarded when flag is 0
+        1:   54:	printf("\nTesting addition of card to discard pile\n");
+        1:   55:	expected = g.discardCount[0] + 1;
+        1:   56:	gainCard(smithy, &g, 0, 0);
+        1:   57:	actual = g.discardCount[0];
+        1:   58:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   59:	isTrue(expected, actual);
+        -:   60:
+        -:   61:	//test that card is added to the deck when flag is 1
+        1:   62:	printf("\nTesting addition of card to deck\n");
+        1:   63:	expected = g.deckCount[0] + 1;
+        1:   64:	gainCard(smithy, &g, 1, 0);
+        1:   65:	actual = g.deckCount[0];
+        1:   66:	printf("Expected: %d	Actual: %d\n", expected, actual);
+        1:   67:	isTrue(expected, actual);
+        -:   68:
+        -:   69:	//test that card is added to the hand when flag is 2
+        1:   70:	printf("\nTesting addition of card to hand\n");
+        1:   71:	expected = g.handCount[0] + 1;
+        1:   72:	gainCard(smithy, &g, 2, 0);
+        1:   73:	actual = g.handCount[0];
+        1:   74:	isTrue(expected, actual);
+        -:   75:
+        -:   76:	//tests removal of card from supply count
+        1:   77:	printf("\nTesting decrease in card supply\n");
+        1:   78:	expected = g.supplyCount[smithy] - 1;
+        1:   79:	gainCard(smithy, &g, 0, 0);
+        1:   80:	actual = g.supplyCount[smithy];
+        1:   81:	isTrue(expected, actual);
+        -:   82:
+        1:   83:	if (failCount > 0)
+        -:   84:	{
+    #####:   85:		printf("\nFINAL RESULT: TEST FAILED\n");
+    #####:   86:		printf("Number of tests failed: %d\n", failCount);
+        -:   87:	}
+        -:   88:	else
+        -:   89:	{
+        1:   90:		printf("\nFINAL RESULT: ALL TESTS PASSED\n");
+        -:   91:	}
+        -:   92:
+        1:   93:	return 0;
+        -:   94:}
